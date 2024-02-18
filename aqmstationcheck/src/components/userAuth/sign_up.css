@@ -1,0 +1,187 @@
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, -50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0px);
+    }
+}
+
+
+.user-form {
+    animation: fromLeft 2s;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    background: #70e1f5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd194, #70e1f5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.user-form label {
+    margin-top: 10px;
+}
+
+.user-form input {
+    outline: none;
+    min-width: 230px;
+    max-width: 230px;
+    min-height: 30px;
+    max-height: 30px;
+    background-color: rgb(6, 69, 81);
+    border: none;
+    color: white;
+    padding: 5px;
+    transition: all 2s;
+}
+
+.user-form input:hover,
+.user-form input:active,
+.user-form input:focus {
+    background-color: white;
+    color: black;
+}
+
+.user-form input::placeholder {
+    color: rgb(115, 115, 15);
+}
+
+.password-section {
+    position: relative;
+}
+
+.password-section span {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    right: 4%;
+}
+
+.image-section,
+.display-user-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.image-section>p {
+    color: red;
+    font-size: 18px;
+}
+
+.display-user-img img {
+    width: 170px;
+    animation: fromLeft 2s;
+}
+
+.reset-user-image {
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    right: 0%;
+    cursor: pointer;
+}
+
+.userImgUploader {
+    padding: 5px 10px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    animation: fromLeft 2s;
+}
+
+.imageUploadBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputUploader {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+.button-section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-section button {
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button-section a:nth-child(2) {
+    background: none;
+    color: rgb(16, 16, 194);
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.button-section button:nth-child(1) {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #4b0f0f;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-section button:nth-child(1):focus {
+    color: #171e29;
+}
+
+.button-section button:nth-child(1):hover {
+    border-color: rgb(255, 153, 0);
+    color: rgb(255, 153, 0);
+    fill: rgb(255, 153, 0);
+}
+
+.button-section button:nth-child(1):active {
+    border-color: rgb(255, 153, 0);
+    color: rgb(255, 153, 0);
+    fill: rgb(255, 153, 0);
+}
+
+@media (min-width: 768px) {
+    .button-section button:nth-child(1) {
+        min-width: 170px;
+    }
+}

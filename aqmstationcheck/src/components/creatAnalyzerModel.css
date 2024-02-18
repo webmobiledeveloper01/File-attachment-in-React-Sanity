@@ -1,0 +1,258 @@
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -50px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.createAnalyzer {
+    min-width: 300px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.analyzerChild {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.analyzerChild label {
+    position: relative;
+    min-width: 75px;
+    max-width: 75px;
+    font-size: 17px;
+}
+
+.dropZone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 60%;
+    height: 40px;
+}
+
+.uploaderBtn {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    opacity: 0;
+}
+
+.overlayLayer {
+    z-index: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: #183356;
+    border: 2px dashed rgb(247, 163, 8);
+    width: 90%;
+    color: white;
+    color: rgb(247, 163, 8);
+
+}
+
+.manual,
+.attachment {
+    position: relative;
+}
+
+.manual::after {
+    position: absolute;
+    font-size: 10px;
+    top: 0%;
+    right: -20%;
+    content: 'Optional';
+    color: rgb(196, 202, 15);
+}
+
+.attachment::after {
+    position: absolute;
+    font-size: 10px;
+    top: -7%;
+    right: -30%;
+    content: 'Optional';
+    color: rgb(196, 202, 15);
+}
+
+.analyzerNote {
+    position: relative;
+}
+
+.analyzerNote::after {
+    position: absolute;
+    font-size: 10px;
+    top: 0%;
+    right: -20%;
+    content: 'Optional';
+    color: rgb(196, 202, 15);
+}
+
+.analyzerChild input,
+.analyzerChild textarea {
+    min-width: 160px;
+    max-width: 160px;
+    background-color: #183356;
+    color: white;
+    padding: 5px;
+    border: none;
+    outline: none;
+    transition: all 2s;
+}
+
+.hide {
+    display: none;
+}
+
+#userParameter {
+    animation: fromTop 2s;
+}
+
+#userParameter input {
+    background-color: rgb(233, 130, 27);
+    color: white;
+}
+
+#userParameter input::placeholder {
+    color: white;
+}
+
+.analyzerChild textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+
+.analyzerChild textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.analyzerChild textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgb(17, 17, 17);
+}
+
+.analyzerChild textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(185, 205, 28);
+    border-radius: 10px;
+    outline: none;
+}
+
+
+.analyzerChild select {
+    cursor: pointer;
+    min-width: 170px;
+    max-width: 170px;
+    padding: 5px;
+    background-color: #183356;
+    color: white;
+}
+
+.analyzerChild select option:last-child {
+    font-style: italic;
+    color: #ec930d;
+}
+
+.analyzer_img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+    box-shadow: 0px 2px 0px 2px rgb(167, 166, 163);
+    transition: all 2s;
+    text-align: center;
+}
+
+.analyzer_img:hover {
+    color: rgb(207, 183, 53);
+    box-shadow: 0px 2px 0px 2px rgb(207, 183, 53);
+}
+
+
+.analyzer_img input {
+    position: absolute;
+    left: 30%;
+    opacity: 0;
+}
+
+.UploadIcon {
+    font-size: 20px;
+}
+
+.analyzer_img img {
+    margin: 1px;
+    width: 260px;
+}
+
+.resetImage {
+    cursor: pointer;
+    position: absolute;
+    left: 1%;
+    top: 5%;
+    background-color: black;
+    padding: 5px;
+    color: red;
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.resetImage:hover {
+    color: yellow;
+}
+
+.resetAttachment {
+    cursor: pointer;
+    position: absolute;
+    left: 1%;
+    top: 5%;
+    background-color: black;
+    padding: 5px;
+    color: red;
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.resetAttachment:hover {
+    color: yellow;
+}
+
+.createBtn {
+    background-color: rgb(21, 196, 77);
+    border: none !important;
+    color: white;
+    transition: all 2s;
+}
+
+.closeBtn {
+    transition: all 2s;
+}
+
+.closeBtn:hover {
+    color: red !important;
+    border: 1px solid red !important;
+}
+
+.createBtn:hover {
+    color: black !important;
+}
+
+
+@media only screen and (max-width: 350px) {
+
+    .createAnalyzer {
+        min-width: 250px;
+    }
+
+    .manual::after {
+        top: -20%;
+        right: 25%;
+    }
+}

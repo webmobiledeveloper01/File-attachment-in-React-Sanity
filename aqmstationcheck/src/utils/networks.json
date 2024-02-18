@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "All"
+    },
+    {
+        "id": 2,
+        "name": "PAZA"
+    },
+    {
+        "id": 3,
+        "name": "PG-Air"
+    },
+    {
+        "id": 4,
+        "name": "North-River"
+    },
+    {
+        "id": 5,
+        "name": "Osisko"
+    },
+    {
+        "id": 6,
+        "name": "CRAZ"
+    },
+    {
+        "id": 7,
+        "name": "SESSA"
+    },
+    {
+        "id": 8,
+        "name": "Enbridge"
+    },
+    {
+        "id": 9,
+        "name": "Other"
+    }
+]

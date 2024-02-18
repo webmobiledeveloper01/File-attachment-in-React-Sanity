@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "stationName": "Henry Pirker",
+        "address": "10326 102 St, Grande Prairie Alberta T8V 2W3",
+        "numberOfAnalyzers": 2,
+        "typeAnalyzer": [
+            {
+                "id": 1,
+                "name": "T100"
+            },
+            {
+                "id": 2,
+                "name": "T200"
+            }
+        ],
+        "image": "https://cityofgp.com/sites/default/files/images/og/default-social.png"
+    },
+    {
+        "id": 2,
+        "stationName": "Beverlodge",
+        "address": "512 5 Ave, Beaverlodge AB T0H 0C0",
+        "numberOfAnalyzers": 2,
+        "typeAnalyzer": [
+            {
+                "id": 1,
+                "name": "T640"
+            },
+            {
+                "id": 2,
+                "name": "Telyden"
+            }
+        ],
+        "image": "https://th.bing.com/th?id=ApNjkF7d+NP9X5g480x360&rs=1&pid=ImgDet"
+    },
+    {
+        "id": 3,
+        "stationName": "Beverlodge",
+        "address": "512 5 Ave, Beaverlodge AB T0H 0C0",
+        "numberOfAnalyzers": 2,
+        "typeAnalyzer": [
+            {
+                "id": 1,
+                "name": "T640"
+            },
+            {
+                "id": 2,
+                "name": "Telyden"
+            }
+        ],
+        "image": "https://th.bing.com/th?id=ApNjkF7d+NP9X5g480x360&rs=1&pid=ImgDet"
+    },
+    {
+        "id": 4,
+        "stationName": "Beverlodge",
+        "address": "512 5 Ave, Beaverlodge AB T0H 0C0",
+        "numberOfAnalyzers": 2,
+        "typeAnalyzer": [
+            {
+                "id": 1,
+                "name": "T640"
+            },
+            {
+                "id": 2,
+                "name": "Telyden"
+            }
+        ],
+        "image": "https://th.bing.com/th?id=ApNjkF7d+NP9X5g480x360&rs=1&pid=ImgDet"
+    },
+    {
+        "id": 5,
+        "stationName": "Beverlodge",
+        "address": "512 5 Ave, Beaverlodge AB T0H 0C0",
+        "numberOfAnalyzers": 2,
+        "typeAnalyzer": [
+            {
+                "id": 1,
+                "name": "T640"
+            },
+            {
+                "id": 2,
+                "name": "Telyden"
+            }
+        ],
+        "image": "https://th.bing.com/th?id=ApNjkF7d+NP9X5g480x360&rs=1&pid=ImgDet"
+    }
+]

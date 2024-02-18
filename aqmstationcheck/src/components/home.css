@@ -1,0 +1,10 @@
+.homeBox {
+    /*display: grid;
+    grid-template-columns: 3% 97%;
+    grid-auto-rows: 10px;*/
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,360 @@
+.stationBox {
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    max-width: 250px;
+    min-width: 250px;
+    margin: 20px 10px;
+    padding: 5px 10px;
+    animation: fadeIn 2s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stationBox.done {
+    background: #159957;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d6dce2, #b8f1d5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b5b8bb, #077d42);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.stationBox a {
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.stationBox h1 {
+    font-size: 18px;
+    position: relative;
+    margin: 5px 0px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    transition: all 2s;
+}
+
+.complitedSite {
+    font-size: 15px;
+    padding: 5px;
+    color: rgb(0, 255, 47);
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.stationBox h1:hover {
+    color: rgb(10, 152, 105);
+}
+
+.stationBox h1:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 240px;
+    height: 2px;
+    margin-left: -120px;
+    content: '';
+    background-color: rgb(64, 62, 62);
+}
+
+.downloadIcon {
+    position: absolute;
+    left: 1%;
+    top: 0%;
+    outline: none;
+    color: white;
+    z-index: 33;
+    font-size: 20px;
+    transition: all 2s;
+}
+
+.downloadIcon:hover {
+    color: rgb(10, 10, 10);
+}
+
+.imageBox {
+    position: relative;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    padding: 1px;
+    background: rgba(168, 165, 165, 0.3);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.stationBox img {
+    max-width: 200px;
+    max-height: 200px;
+    transition: all 2s;
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.imageOverlay a {
+    color: white;
+}
+
+.imageOverlay:hover {
+    opacity: 1;
+}
+
+.imageOverlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.imageOverlay:hover>* {
+    transform: translateY(0px);
+}
+
+
+
+
+.analyzerModel {
+    width: 100%;
+    background: #536976;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #292E49, #536976);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2e3a7f, #536976);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    position: relative;
+    height: 60px;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.analyzerModel::-webkit-scrollbar {
+    width: 4px;
+}
+
+.analyzerModel::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgb(76, 11, 11);
+}
+
+.analyzerModel::-webkit-scrollbar-thumb {
+    background-color: rgb(252, 253, 253);
+    border-radius: 10px;
+    outline: none;
+}
+
+
+.analyzerModel a {
+    text-decoration: none;
+    color: black;
+}
+
+.stationDescription {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 80px;
+    max-height: 80px;
+    text-align: center;
+    max-width: 250px;
+    min-width: 250px;
+    word-break: break-all;
+}
+
+.analyzer {
+    cursor: pointer;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 2px;
+    margin: 5px;
+    min-width: 35px;
+    max-width: 35px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s;
+}
+
+.analyzer:hover,
+.analyze:focus {
+    background-color: rgb(232, 155, 22);
+    color: rgb(251, 248, 248);
+}
+
+
+.analyzer.done {
+    background-color: rgb(8, 184, 8) !important;
+    color: white !important;
+    text-decoration: line-through;
+}
+
+.analyzer.done:hover {
+    background-color: rgb(232, 155, 22) !important;
+}
+
+
+.noAnalyzer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.noAnalyzer span {
+    font-size: 15px;
+}
+
+.noAnalyzer a {
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    padding: 2px 5px;
+    transition: all 2s;
+    background-color: white;
+}
+
+.noAnalyzer a:hover,
+.noAnalyzer a:active {
+    background-color: orange;
+    color: white;
+}
+
+.postedbyBox {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.postUserInfo {
+    background-color: orange;
+    padding: 2px;
+    color: white;
+    border-radius: 5px;
+    justify-content: right;
+}
+
+.stationRemove {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.addressIcon a {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    transition: all 2s;
+    text-decoration: none;
+    color: black;
+}
+
+.addressIcon img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.addressIcon a:hover,
+.addressIcon a:focus {
+    color: #d17213;
+}
+
+.addressIcon a::after {
+    content: "Address";
+    font-weight: bold;
+    font-size: 10px;
+    position: absolute;
+    top: -10%;
+    right: -40%;
+}
+
+.siteNetwork {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    padding: 5px;
+    background-color: rgba(9, 130, 167);
+    font-size: 12px;
+    color: white;
+}
+
+.copyAddress {
+    margin-right: 0.5rem;
+    background-color: rgb(6, 110, 147);
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+    outline: none;
+    transition: all 2s;
+}
+
+.copyAddress:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+.copyAddress:focus {
+    background-color: aliceblue;
+    color: black;
+}
+
+.deleteStation {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: red;
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.deleteStation:hover,
+.deleteStation:focus {
+    background-color: transparent;
+    color: rgb(255, 1, 1)
+}

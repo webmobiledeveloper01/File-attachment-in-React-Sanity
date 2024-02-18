@@ -1,0 +1,376 @@
+.analyzerPage {
+    width: 100%;
+}
+
+.analyzerBox {
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    animation: fadeIn 2s;
+    /*word-break: break-all;*/
+    display: flex;
+    min-height: 500px;
+    flex-direction: row;
+}
+
+.analyzerContent {
+    width: 100%;
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.analyzerContent h1 {
+    font-size: 2rem;
+    background-image: linear-gradient(to top, rgb(132, 41, 222), rgb(12, 204, 121));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.analyzerImage {
+    position: relative;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(24, 24, 154, 0.25) 0px 30px 60px -12px inset, rgba(9, 244, 103, 0.3) 0px 18px 36px -18px inset;
+}
+
+.analyzerAuthor {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    background-color: orange;
+    padding: 5px;
+    color: white;
+}
+
+.analyzerImage img {
+    cursor: zoom-in;
+    width: 300px;
+}
+
+.customParag {
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to top, rgb(107, 73, 9), rgb(12, 204, 121));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+}
+
+.manualLink {
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: rgb(25, 16, 1) 1.95px 1.95px 2.6px;
+    font-weight: 700;
+    background-image: linear-gradient(to top, rgb(107, 73, 9), rgb(12, 204, 121));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    padding: 5px 10px;
+    transition: all 2s;
+}
+
+.manualLink:hover,
+.manualLink:focus {
+    box-shadow: rgb(179, 179, 181) 1.95px 1.95px 2.6px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, -50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0px);
+    }
+}
+
+
+.btnAnalyzer button {
+    font-weight: 600;
+    margin-top: 1rem;
+    outline: none;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 10px 5px;
+    text-align: center;
+    width: 80px;
+    border: none;
+    background-color: black;
+    color: aliceblue;
+    transition: all 2s;
+}
+
+.btnAnalyzer button:hover {
+    background-color: white;
+    color: black;
+}
+
+.closeComment {
+    background-color: rgb(232, 10, 10) !important;
+    color: white !important;
+}
+
+.showComment:focus {
+    background-color: rgb(2, 2, 2) !important;
+    color: rgb(243, 239, 239) !important;
+}
+
+
+.deletAnalyzer {
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: rgb(13, 13, 13);
+    color: rgb(246, 116, 116);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.commentSection {
+    animation: fromLeft 2s;
+    position: relative;
+    padding: 10px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.allComments {
+    width: 25%;
+}
+
+.createComments {
+    padding: 10px;
+    background-color: rgb(249, 249, 250);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 20%;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.createComments img {
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.createComments textarea {
+    margin: 5px;
+    width: 100%;
+    min-height: 100px;
+    outline: none;
+    border: 1px solid rgb(211, 211, 211);
+    resize: none;
+}
+
+.createComments textarea::placeholder {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(182, 181, 178);
+}
+
+.createComments button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(15, 27, 73);
+    color: white;
+    padding: 10px 5px;
+    transition: all 2s;
+    font-weight: 700;
+}
+
+.createComments button:hover {
+    color: rgb(0, 0, 0);
+    background-color: white;
+
+}
+
+.commentBody {
+    min-height: 130px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(15, 27, 73);
+    color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    position: relative;
+}
+
+.commentAuthor {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.commentAuthor:first-child {
+    color: rgb(240, 233, 233);
+    font-style: italic;
+    padding: 0px 5px;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+.comRemove {
+    cursor: pointer;
+    background-color: white;
+    color: red;
+    padding: 2px;
+    font-size: 15px;
+    border-radius: 50%;
+}
+
+.commentText {
+    margin-top: 5px;
+    text-align: left;
+    font-size: 15px;
+    word-break: break-all;
+    min-height: 60px !important;
+    max-height: 60px !important;
+    overflow-y: auto;
+    background-color: rgba(247, 243, 243, 0.2);
+    margin: 5px;
+}
+
+.commentText::-webkit-scrollbar {
+    width: 5px;
+    /*Gives you width to the scrollbar*/
+}
+
+.commentText::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgb(247, 13, 13);
+    /*Gives styles to the scrollbar*/
+}
+
+.commentText::-webkit-scrollbar-thumb {
+    background-color: rgb(231, 231, 236);
+    border-radius: 10px;
+    /*Gives background color to the scrollbar*/
+    outline: none;
+}
+
+.commentText p {
+    padding: 5px;
+}
+
+.commentBody img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 1px solid rgb(162, 159, 159);
+}
+
+.noComments {
+    font-style: italic;
+}
+
+.noComments p {
+    color: rgb(146, 142, 142);
+}
+
+.createdDate {
+    position: absolute;
+    bottom: 0%;
+    right: 1%;
+}
+
+.createdDate p {
+    font-size: 10px;
+    font-style: italic;
+    color: rgb(238, 174, 91);
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .allComments,
+    .createComments {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .analyzerImage {
+        min-width: 300px;
+        padding: 5px;
+    }
+
+    .analyzerImage img {
+        width: 270px;
+    }
+
+    .analyzerContent {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .commentSection {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .analyzerBox {
+        margin-top: 10px;
+        font-family: 'Oswald', sans-serif;
+        animation: fadeIn 2s;
+        /*word-break: break-all;*/
+        display: flex;
+        min-height: 500px;
+        flex-direction: column;
+    }
+
+    .analyzerImage {
+        box-shadow: none;
+        background-color: rgb(231, 228, 224);
+    }
+
+    .commentBody img {
+        width: 30px;
+    }
+
+    .commentAuthor p {
+        font-size: 8px;
+    }
+
+
+
+    .createComments button {
+        font-size: 10px;
+    }
+}

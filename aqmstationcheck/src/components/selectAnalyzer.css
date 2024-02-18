@@ -1,0 +1,72 @@
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, -50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0px);
+    }
+}
+
+.modelBox {
+    position: relative;
+    animation: fromLeft 2s;
+    padding: 10px;
+    background-color: #2C5364;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.modelBox select {
+    outline: none;
+    margin: 5px 0px;
+}
+
+.modelBox button {
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 2s;
+}
+
+.closeModel {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+.closeModel:hover {
+    color: red;
+}
+
+.createAnalyzerOpt {
+    cursor: pointer;
+    position: absolute;
+    color: rgb(238, 219, 10);
+    transition: all 2s;
+}
+
+.createAnalyzerOpt::after {
+    content: "Create Analyzer";
+    font-size: 12px;
+}
+
+.createAnalyzerOpt:hover,
+.createAnalyzerOpt:focus {
+    color: rgb(247, 248, 247);
+}
+
+
+
+.modelBox button:hover {
+    background-color: rgb(18, 18, 18);
+    color: white;
+}

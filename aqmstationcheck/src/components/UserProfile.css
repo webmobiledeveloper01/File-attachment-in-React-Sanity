@@ -1,0 +1,300 @@
+.userComponent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+    animation: fadeIn 2s;
+}
+
+.imageBannerBox {
+    font-family: 'Oswald', sans-serif;
+    background: #2980B9;
+    background-image: url("https://source.unsplash.com/1800x300/?nature");
+    min-height: 300px;
+    max-height: 300px;
+    color: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+}
+
+.displayNewImg {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+    background-color: transparent !important;
+}
+
+.displayNewImg img {
+    border: none !important;
+    margin-bottom: 5px;
+    max-height: 120px
+}
+
+.removeImg {
+    background-color: red;
+    padding: 2px;
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.removeImg:hover,
+.removeImg:active {
+    background-color: transparent;
+    color: rgb(188, 246, 101);
+}
+
+.userImg {
+    position: absolute;
+    bottom: -10%;
+    left: 45%;
+}
+
+.userImg img {
+    animation: fadeIn 2s;
+    max-width: 140px;
+    border-radius: 10%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.userImg>div {
+    animation: fadeIn 2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    padding: 10px;
+    background-color: #8f9192;
+    box-shadow: rgba(50, 50, 93, 0.9) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px inset;
+}
+
+.userImg>div p {
+    color: black;
+}
+
+.userImg>div button {
+    margin-top: 5px;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin: 5px;
+}
+
+.closeIcon.second {
+    background-color: aliceblue;
+    color: red;
+    font-size: 10px;
+    padding: 2px;
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.closeIcon.second:hover,
+.closeIcon.second:focus {
+    background-color: red;
+    color: aliceblue;
+}
+
+.imageUploade {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.uploaderIcon {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+
+.imageUploade input {
+    position: absolute;
+    top: 0%;
+    z-index: 22;
+    opacity: 0;
+}
+
+.imageUploade button {
+    cursor: pointer;
+    margin-top: 1rem;
+    border: none;
+    padding: 5px 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+
+.userInfo {
+    margin-left: 5rem;
+    min-width: 220px;
+    max-width: 220px;
+    text-align: left;
+}
+
+.userInfo h1 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.userInfo h2 {
+    width: 90px;
+    text-align: center;
+    margin: 10px;
+    font-size: 18px;
+    background-color: rgba(214, 209, 209, 0.5);
+    color: black;
+    position: absolute;
+    bottom: 0;
+}
+
+.logoutIcon {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 50;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.logoutIcon:hover {
+    color: orange;
+    animation: rotate 2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    25% {
+        transform: rotate(90deg)
+    }
+
+    50% {
+        transform: rotate(180%);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.userContent {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.userBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.userBtns button {
+    font-size: 15px;
+    width: 120px;
+    padding: 10px 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    background-color: rgb(56, 55, 55);
+    font-family: 'Oswald', sans-serif;
+}
+
+.filesBox {
+    width: 90%;
+    color: white;
+    background-color: rgba(20, 20, 21, 0.9);
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    margin: 5px;
+    box-shadow: rgba(42, 68, 112, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.filesBox h3 {
+    margin-left: 1rem;
+    font-size: 20px;
+}
+
+.filesBox a {
+    text-decoration: none;
+}
+
+.selectedBtn {
+    background-color: rgb(236, 237, 240) !important;
+    color: rgb(177, 87, 9) !important;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .userInfo {
+        text-align: left;
+    }
+
+    .filesBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .userImg img {
+        max-width: 80px;
+    }
+
+    .userImg>div {
+        min-width: 100px;
+        padding: 2px;
+    }
+
+    .userInfo h1 {
+        font-size: 20px;
+        padding: 5px;
+        width: 80px;
+        margin: 5px;
+    }
+
+    .userInfo h2 {
+        left: 1%;
+
+        font-size: 15px;
+        width: 80px;
+        margin: 5;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, -50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0px);
+    }
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+    /* to turn off default browser password reveling feature*/
+    display: none;
+}
+
+
+.innerLogin {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    animation: fromLeft 2s;
+    background: #4CA1AF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C4E0E5, #4CA1AF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.loginPassword {
+    display: flex;
+    position: relative;
+}
+
+
+.loginPassword span {
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.imgLoadingText {
+    border: 1px solid red;
+    text-align: center;
+}
+
+.innerLogin img {
+    position: absolute;
+    bottom: 5%;
+    z-index: 22;
+    width: 150px;
+}
+
+.loginForm {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    width: 300px;
+    font-size: 18px;
+    z-index: 22;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(219, 217, 217, 0.9);
+    font-family: 'Oswald', sans-serif;
+}
+
+.loginForm input {
+    min-width: 200px;
+    max-width: 200px;
+    margin: 10px;
+    transition: all 2s;
+    outline: none;
+    border: none;
+    padding: 5px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.loginForm input:focus {
+    background-color: rgb(228, 246, 186);
+    outline: none;
+}
+
+.loginForm button {
+
+    border: none;
+}
+
+.signUpBtn {
+    margin-top: 5px;
+    text-decoration: none;
+    transition: all 2s;
+}
+
+.signUpBtn:hover,
+.signUpBtn:focus {
+    color: #db750e;
+}
+
+
+
+.loginForm button {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 30px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
+}
+
+.loginForm button:hover {
+    background: #F6F9FE;
+    color: #db750e;
+}
+
+.loginForm button:active {
+    box-shadow: 0 4px 4px 0 rgba(221, 123, 11, 0.3), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+.loginForm button:focus {
+    outline: none;
+    border: 2px solid #f4c542;
+}
+
+.loginForm button:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.loginForm button:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.loginForm button:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.loginForm button:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.loginForm button:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.loginTitle {
+    font-family: "Open Sans", Impact;
+    position: absolute;
+    z-index: 22;
+    color: white;
+    top: 5%;
+    text-align: center;
+    font-size: 3em;
+    color: #c7a2a2;
+    letter-spacing: -7px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+    from {
+        text-shadow: 0px 0px 10px #fff,
+            0px 0px 10px #fff,
+            0px 0px 25px #fff,
+            0px 0px 25px #fff,
+            0px 0px 25px #fff,
+            0px 0px 25px #fff,
+            0px 0px 25px #fff,
+            0px 0px 25px #fff,
+            0px 0px 50px #fff,
+            0px 0px 50px #fff,
+            0px 0px 50px #7B96B8,
+            0px 0px 150px #7B96B8,
+            0px 10px 100px #7B96B8,
+            0px 10px 100px #7B96B8,
+            0px 10px 100px #7B96B8,
+            0px 10px 100px #7B96B8,
+            0px -10px 100px #7B96B8,
+            0px -10px 100px #7B96B8;
+    }
+}
+
+.loginCentrBox {
+    /*box-shadow: 5px 5px 5px rgb(49, 188, 179);*/
+    z-index: 22;
+}
+
+
+
+
+@media only screen and (max-width: 350px) {
+    .loginForm {
+        width: 200px;
+    }
+
+}

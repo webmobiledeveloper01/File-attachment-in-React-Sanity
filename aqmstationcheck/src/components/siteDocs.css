@@ -1,0 +1,153 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.siteDocs {
+    animation: fadeIn 2s;
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.siteDocs h3 {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    width: 90%;
+    display: flex;
+}
+
+.siteDocs h3>span {
+    background-color: rgb(226, 211, 43);
+    margin-left: 5px;
+    padding: 2px;
+    font-weight: bold;
+}
+
+.drop_zone {
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+}
+
+.upload_btn {
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    width: 90%;
+}
+
+.overlay-layer {
+    z-index: 0;
+    margin-top: 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    padding: 5px;
+    background: rgba(4, 14, 87, 0.7);
+    border: 2px rgb(254, 246, 19);
+    font-size: 18px;
+    color: rgb(247, 243, 27);
+    font-weight: 600;
+    border-style: dashed;
+}
+
+.allSiteDocs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px 0px 5px 0px;
+    width: 90%;
+    border: 0.5px solid rgb(226, 226, 235);
+}
+
+.allSiteDocs p {
+    margin-left: 5px;
+    color: brown;
+}
+
+.siteDocument {
+    animation: fadeIn 2s;
+    background-image: url('../components/assets/fileIcon.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    min-width: 120px;
+    max-width: 120px;
+    min-height: 120px;
+    max-height: 120px;
+    box-shadow: rgba(235, 167, 7, 0.25) 0px 50px 100px -20px, rgba(105, 3, 3, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.siteDocument a {
+    padding: 5px;
+    text-decoration: none;
+    color: yellow;
+    background-color: rgba(10, 37, 64, 0.5);
+    max-height: 60px;
+    min-height: 60px;
+    transition: all 2s;
+}
+
+.siteDocument a:hover,
+.siteDocument a:active {
+    background-color: rgba(37, 64, 10, 0.8);
+}
+
+.siteDocument span {
+    background-color: rgb(4, 85, 81);
+    font-size: 12px;
+    width: 15%;
+    color: white;
+}
+
+.siteDocument p {
+    font-size: 12px;
+    font-style: italic;
+    width: 50%;
+    background-color: rgba(4, 85, 81, 0.6);
+    color: rgb(252, 252, 255);
+}
+
+
+.searchDocsBox {
+    width: 90%;
+    display: flex;
+}
+
+.searchSiteDocs {
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    background-color: rgba(6, 6, 89, 0.8);
+    color: white;
+    padding: 5px;
+    min-width: 20%;
+    outline: none;
+}
+
+.searchSiteDocs::placeholder {
+    color: rgb(220, 217, 217);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .allSiteDocs {
+        justify-content: center;
+    }
+}

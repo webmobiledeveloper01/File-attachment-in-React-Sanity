@@ -1,0 +1,88 @@
+.analyzerWrap {
+    background-color: rgba(169, 164, 128, 0.1);
+}
+
+.contentAnalyzer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.contentAnalyzer a {
+    color: black;
+}
+
+.sinForAnalyzer {
+    color: #0f8854;
+}
+
+.sinForAnalyzer::before {
+    content: "SIN: ";
+    color: rgb(5, 28, 2);
+    font-weight: bold;
+}
+
+.openAnalyzer {
+    margin-left: 5px;
+    background: rgb(6, 46, 133);
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+.openAnalyzer:hover {
+    background: #0f9655;
+}
+
+.analyzerStatus {
+    max-width: 300px;
+    min-width: 300px;
+    padding: 5px;
+    font-weight: 700;
+    background-color: rgb(232, 231, 229);
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.analyzerStatus label {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.analyzerStatus label span {
+    width: 150px;
+}
+
+.fixIcon {
+    position: absolute !important;
+    top: 5% !important;
+    right: 0% !important;
+    width: 20px !important;
+    padding: 3px;
+    border-radius: 50px;
+    color: white;
+    margin-right: 2px;
+    font-size: 20px;
+}
+
+.saveBTN {
+    background-color: #15f192;
+    color: white;
+    font-weight: 650;
+    border: none;
+    transition: all 2s;
+}
+
+.saveBTN:hover {
+    background-color: white !important;
+    color: rgb(40, 234, 15) !important;
+}

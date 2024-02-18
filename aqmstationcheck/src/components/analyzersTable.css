@@ -1,0 +1,224 @@
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, -50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0px);
+    }
+}
+
+.tableLayout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.analyzersList {
+    position: relative;
+    border-collapse: collapse;
+    margin: 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.addFistAnalyzer {
+    padding: 5px;
+    font-style: italic;
+    cursor: pointer;
+    color: #0c7416;
+}
+
+.addFistAnalyzer::before {
+    content: "+";
+    font-size: 20px;
+}
+
+.analyzersList a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(95, 158, 7);
+}
+
+.analyzersList tr {
+    padding: 1px;
+}
+
+.analyzersList thead tr {
+    background-color: rgb(42, 40, 94);
+}
+
+.analyzersList thead th {
+    color: white;
+    font-size: 1.15em;
+}
+
+.analyzersList tbody tr:nth-child(even) {
+    background-color: rgb(158, 157, 169);
+}
+
+.analyzersList th,
+.analyzersList td {
+    font-size: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.analyzersList caption {
+    background-color: rgb(30, 6, 61);
+    color: rgb(254, 254, 254);
+    height: 30px;
+}
+
+.container {
+    animation: fromLeft 2s;
+    max-height: 500px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+    width: 2px;
+    /*Gives you width to the scrollbar*/
+}
+
+.container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgb(251, 251, 250);
+    /*Gives styles to the scrollbar*/
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: rgb(3, 5, 66);
+    border-radius: 10px;
+    /*Gives background color to the scrollbar*/
+    outline: none;
+}
+
+
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.adding {
+    position: absolute;
+    margin-top: 5px;
+    right: 20px;
+    color: rgb(250, 251, 247);
+    padding: 2px;
+    font-size: 15px;
+    background-color: #129b1f !important;
+    border-radius: 50%;
+    transition: all 2s;
+    cursor: pointer;
+}
+
+.adding:hover {
+    background-color: white;
+    color: #0F2027;
+}
+
+.adding:hover::after {
+    content: 'Add Analyzer';
+    position: absolute;
+    width: 100px;
+    margin-top: 7px;
+    left: -90px;
+    animation: fromLeft 2s;
+    font-style: italic;
+    font-size: 15px;
+    color: aquamarine;
+}
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, -50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0px);
+    }
+}
+
+.removeAnalyzer {
+    position: absolute;
+    left: 2%;
+    background-color: rgb(144, 12, 12);
+    color: white;
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .tableLayout {
+        margin-bottom: 1rem;
+    }
+
+    .analyzersList {
+        margin: 0;
+        padding: 0;
+    }
+
+    .analyzersList thead tr {
+        display: none;
+    }
+
+    .analyzersList tr {
+        display: block;
+    }
+
+    .analyzersList th,
+    .analyzersList td {
+        padding: .5em;
+    }
+
+    .analyzersList td {
+        text-align: right;
+        display: block;
+        font-size: 1em;
+    }
+
+    .analyzersList td::before {
+        content: attr(data-title) ": ";
+        float: left;
+    }
+
+    .analyzersList tbody tr:nth-child(even) {
+        color: white !important;
+    }
+
+
+
+    .adding:hover::after {
+        display: none;
+    }
+
+    .analyzersList {
+        width: 80%;
+        border: 0.5px solid rgb(228, 228, 228);
+    }
+
+    .removeAnalyzer {
+        position: absolute;
+        left: 70%;
+    }
+
+
+    .adding {
+        position: absolute;
+        right: 15%;
+    }
+}
